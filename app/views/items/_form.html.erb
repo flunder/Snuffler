@@ -1,0 +1,41 @@
+<div class="row">
+	<%= f.error_messages %>
+</div>
+
+<div class="row">
+    <%= f.label :name, 'Name:' %>
+    <%= f.text_field :name, :id => 'sF_name'  %>
+</div>
+
+<div class="row">
+     <%= f.label :blurber, 'MyBlurb:' %>
+     <%= f.text_area :blurber, :id => 'sF_blurb' %>
+</div>
+
+<div class="row">
+	<%= f.label :image_url, 'Image url:' %>
+	<%= f.text_field :image_url, :id => 'sF_extphoto' %>
+</div>
+
+<div class="row">
+	<%= f.label :photo, 'Image upload:' %>
+	<%= f.file_field :photo, :id => 'sF_photo' %>
+</div>
+
+<div class="row">
+	<%= f.label :type, 'Type' %>
+	<%= select_tag :type, (options_for_select([
+		['General', 1], 
+		['Design', 2],
+		['Code', 3],
+		],1)) %>
+</div>
+
+<div class="row">
+     <%= f.label :from, 'Pinched from:' %>
+     <%= f.text_field :from, :id => 'sF_url' %>
+</div>
+
+<div class="row">
+	<%= f.submit 'Save', :id => 'sF_create' %>
+</div>

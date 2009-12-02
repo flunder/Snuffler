@@ -1,0 +1,11 @@
+<h1>New snuff</h1>
+<%= link_to 'Back', items_path %>
+
+<% if logged_in? %>  
+	<% form_for(@item, :html => { :multipart => true, :id => 'snuffForm' }) do |f| %>
+		<%= render :partial => 'form', :locals => { :f => f } %> 
+		<% end %>
+<% else %>
+	Please login to snuffle!
+<% end %>
+	

@@ -1,0 +1,321 @@
+#newSnuff {
+text-decoration: none;
+font-size: 2em;
+padding-top: 42px !important;
+text-align: center;
+float: left;
+width: 100px;
+height: 55px !important;
+font-weight: bold;
+color: #009acd;
+}
+
+.snuffDetailsFrom {
+height: 70px;
+}
+
+.snuffDetailsAdmin {
+width: 100px;
+}
+
+.snuffDetailsAdmin a {
+color: #bbb !important;
+margin-right: 17px;
+}
+
+
+.snuffDetailsAdmin a:hover {
+color: #333 !important;
+}
+
+a:active, a:focus {
+	outline: 0
+}
+
+body {
+	font: 11px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	line-height: 18px;
+	background: #eee;
+	margin: 0px;
+	padding: 0px;
+}
+
+pre {
+	background-color: #eee;
+	padding: 10px;
+	font-size: 11px;
+}
+
+a {
+	color: #000;
+}
+a:visited {
+	color: #666;
+}
+a:hover {
+	text-decoration: underline;
+
+}
+
+.fieldWithErrors {
+	padding: 2px;
+	background-color: red;
+	display: table;
+}
+
+#errorExplanation {
+	width: 400px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#errorExplanation p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#errorExplanation ul li {
+	font-size: 12px;
+	list-style: square;
+}
+
+
+
+
+
+
+#snuffForm {
+}
+
+
+#snuffForm .row {
+	float: left;
+	clear: both;
+	margin-bottom: 5px;
+}
+
+#snuffForm label {
+	width: 80px;
+	float: left;
+	padding: 3px;
+	margin-right: 6px;
+	color: #aaa;
+}
+
+#snuffForm input,
+#snuffForm textarea {
+	width: 200px;
+	float: left;
+	border: 1px solid #ddd;
+	padding: 3px;
+}
+
+#snuffForm textarea#sF_blurb {
+	width: 400px;
+	height: 100px;
+}
+
+#snuffForm #sF_name {
+	font-weight: bold;
+	font-size: 18px;
+	border: 1px dotted #ddd;
+}
+
+
+#snuffForm #sF_photo {
+	width: 10px !important;
+}
+
+
+#snuffForm #sF_create {
+	width: 100px;
+	float: left;
+	margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.snuffWrap {
+	width: 100px;
+	float: left;
+	margin: 5px;
+	background: #efefef;
+}
+
+.snuffWrap .snuffImg {
+	float: left;
+}
+
+.snuffWrap .snuffImg img {
+	border: 0px;
+}
+
+.snuffWrap .snuffName {
+	color: #00AEEF;
+	text-decoration: none;
+	text-transform: uppercase !important;
+	position: relative;
+	font-size: 9px;
+	background: #fff;
+	border-top: 1px solid #ccc;
+	width: 90px;
+	float: left;
+	padding: 5px;
+	text-align: right;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 5px;
+}
+
+.snuffWrap .snuffName:hover {
+	background: #ddd;
+	color: #333;
+}
+
+.snuffWrap .snuffBlurb {
+	margin-top: -23px;
+	color: #333;
+	font-size: 10px;
+	border-bottom: 1px dotted red;
+	text-decoration: none;
+	min-height: 20px;
+	float: left;
+}
+
+
+
+.snuffWrap .administr {
+	font-size: 8px;
+}
+
+#results {
+	width: 880px;
+	float: left;
+	padding-left: 20px;
+}
+
+#results > a {
+	background: #ddd;
+	width: 86px;
+	height: 89px;
+	padding: 6px;
+	float: left;
+	margin: 5px;
+}
+
+.snuffContentWrap {
+	overflow: hidden;
+	height: 100px;
+	background: #ddd;
+}
+
+.snuffDetails {
+	background: #ddd;
+	padding: 10px;
+	height: 100px;
+	width: 80px;
+	color: #eee;
+	float: left;
+	overflow: hidden;
+	line-height: 13px;
+}
+
+.snuffDetails a {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#header {
+	height: 100px;
+	background: #000000 none repeat scroll 0 0;
+	clear: both;
+	color: #FFFFFF;
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#header h1 {
+	background: #ff3300;
+	width: 170px;
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	margin-left: 20px;
+}
+
+#header h1 a {
+	font-size: 27px;
+	font-weight: 500;
+	margin-left: 10px;
+	color: #fff !important;
+	text-decoration: none;
+	padding-top: 70px;
+	float: left;
+}
+
+#header #snuffles {
+	float: left;
+	padding-top: 76px;
+	margin-left: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+#header #snuffles #snufflesAll,
+#header #snuffles #snufflesMine {
+float: left;
+}
+
+#header #snuffles #snufflesAll a{
+color: #333;
+text-decoration: none;
+margin-right: 5px;
+}
+
+#header #snuffles #snufflesMine a {
+color: #fff;
+text-decoration: none;
+}
+
+#header #userWrap {
+	width: 880px;
+	margin-top: 74px;
+}
+
+#header #userWrap #user {
+	float: right;
+}
+
+#header #userWrap #user a {
+	color: #666 !important;
+}
+
+#flash_notice,
+#flash_error {
+	margin-left: 20px;
+	font-weight: bold;
+}

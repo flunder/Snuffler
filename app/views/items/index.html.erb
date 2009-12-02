@@ -1,0 +1,8 @@
+<% if logged_in? %>  
+	<%= link_to 'New', new_item_path, :id => 'newSnuff' %>
+<% end %>
+
+<%= render(:partial => "item", :collection => @items) %>
+
+<%= will_paginate(@items) %>
+<%= pageless(@items.total_pages, items_path) %>

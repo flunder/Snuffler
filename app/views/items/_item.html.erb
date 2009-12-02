@@ -1,0 +1,43 @@
+<% if item.photo.exists? then %>
+
+	<div class="snuffWrap">
+		
+		<div class="snuffContentWrap">
+			<%= link_to (image_tag item.photo.url(:thumb)), item, :class => 'snuffImg' %>
+			<div class="snuffDetails">
+				
+				<div class="snuffDetailsFrom">
+					
+					<%= link_to item.user.username, user_path(item.user) %>
+					
+					<% if item.from != "" %>
+						<%= link_to 'host', item.from %>
+					<% end %>
+				</div>
+								
+				<% if logged_in? %> 
+					<% if current_user.has_role?('Admin') || item.user.id == current_user.id %>
+						<div class="snuffDetailsAdmin">
+							<%= link_to 'Edit', edit_item_path(item) %>
+							<%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+						</div>
+					<% end %>
+				<% end %>
+				
+			</div>
+		</div>
+
+		<%= link_to item.name[0,16], item, :class => 'snuffName' %>
+
+		
+	
+
+		<!--
+		<div class="administr">
+			<%= link_to 'Show', item %>
+	    	<%= link_to 'Edit', edit_item_path(item) %>
+	    	<%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+		</div>
+		-->
+	</div>
+<% end %>

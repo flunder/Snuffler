@@ -1,0 +1,13 @@
+2009/11/30 - Start :D
+	- previously done components wrapped into one app
+	- create/edit/destroy items
+	- paperclip image upload / fetch url 
+	- pageless 
+	- design
+	- login/signup
+	- v0.1 live on hal
+	
+2009/12/01 - Login 
+	- basic user roles 
+	- admin role exists ~ but how do you get one?
+	- edit my item

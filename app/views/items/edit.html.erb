@@ -1,0 +1,9 @@
+<h1>Edit snuff</h1>
+<%= link_to 'Back', items_path %>
+
+<% form_for(@item,:html => { :multipart => true, :id => 'snuffForm' }) do |f| %>
+	<%= render :partial => 'form', :locals => { :f => f } %> 
+<% end %>
+
+
+

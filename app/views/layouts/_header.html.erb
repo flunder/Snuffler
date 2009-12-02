@@ -1,0 +1,14 @@
+<div id="header">		
+	<h1><a href="/">Snuffler</a></h1>
+	
+	<div id="snuffles">
+		<div id="snufflesAll"><%=link_to "%05d" % Item.all.size, root_url %></div>
+		<% if logged_in? %>
+			<div id="snufflesMine">(<%= link_to current_user.items.size, user_path(current_user) %>)</div> 
+		<% end %>	
+	</div>
+	
+	<div id="userWrap">
+		<div id="user"><%= render :partial => "users/login" %></div>
+	</div>
+</div>

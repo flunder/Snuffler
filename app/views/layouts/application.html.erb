@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Articles: <%= controller.action_name %></title>
+	<link rel="alternate" type="application/atom+xml" title="RSS" href="items.rss" />
+    <%= stylesheet_link_tag 'small' -%>
+    <%= javascript_include_tag 'jquery-1.3.2.min', 'jquery.pageless', 'application' -%>
+  </head>
+  <body>
+	
+	<%= render(:partial => "layouts/header") %>
+	
+	<%- flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <%- end -%>
+
+    <div id="results">
+      <%= yield  %>
+    </div>
+  </body>
+</html>

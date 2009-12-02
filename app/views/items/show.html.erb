@@ -1,0 +1,19 @@
+<h2><%=h @item.name %></h2>
+<%=h @item.image_remote_url %>
+
+<% if @item.photo.exists? then %>
+	<p><%= image_tag @item.photo.url(:large) %></p>
+<% else %>
+	<p> Whae? There are no photo's attached!</p>
+<% end %>
+
+<% if @item.from != "" %>
+	<%= link_to 'host', @item.from %>
+<% end %>
+
+<% if logged_in? %> 
+	<%= link_to 'Edit', edit_item_path(@item) %>
+<% end %>	
+
+<%= link_to 'Back', items_path %>
+	
