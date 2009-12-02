@@ -7,9 +7,9 @@ class Item < ActiveRecord::Base
   # Paperclip
   has_attached_file :photo,
     :styles => {
-      :thumb => "100x100#",
-      :medium => "200x200#",
-      :large =>   "700x700>" }
+      :thumb =>  ["100x100#", :png],
+      :medium => ["200x200#", :png],
+      :large =>  ["700x700>", :png]}
       
   attr_accessor :image_url
   attr_accessor :image_remote_url
