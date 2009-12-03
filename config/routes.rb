@@ -9,7 +9,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sessions
   map.resources :users
   map.resources :items
-  map.resources :collections, :controller => "collections", :has_many => :items 
+  map.resources :collections, :controller => "collections", :has_many => :items, :action => 'new' 
+
+  # ajax pick/unpick
+  map.connect 'collections', :controller => 'collections', :action => 'create'
 
   # broken?
   map.resources :users, :has_many => :items

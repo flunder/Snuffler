@@ -23,11 +23,9 @@
 							<%= f.hidden_field :item_id, :value => item.id %>
 						  	<%= f.hidden_field :user_id, :value => current_user.id %>
   						  	<% if @myCollection != nil %>
-						  		<!--%= f.hidden_field :state, :value => 'add' %-->						
-    					  		<%= f.submit 'unpick'%>
+    					  		<%= f.submit 'unpick', :class => 'pickme' %>
 						  	<% else %>
-						  		<!--%= f.hidden_field :state, :value => 'remove' %-->						
-     					  		<%= f.submit 'pick'%>
+     					  		<%= f.submit 'pick', :class => 'pickme' %>
 						  	<% end %>
 						<% end %>
 						
