@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sessions
   map.resources :users
   map.resources :items
+  map.resources :collections, :controller => "collections", :has_many => :items 
 
   # broken?
   map.resources :users, :has_many => :items

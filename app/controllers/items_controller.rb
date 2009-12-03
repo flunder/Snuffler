@@ -84,4 +84,8 @@ class ItemsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def pick
+  end
+  
 end

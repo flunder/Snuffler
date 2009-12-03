@@ -13,9 +13,19 @@
 					<% if item.from != "" %>
 						<%= link_to 'host', item.from %>
 					<% end %>
+					
+					<% if logged_in? %> 
+					
+						<% form_for Collection.new do |f| %>
+						  <%= f.hidden_field :item_id, :value => item.id %>
+						  <%= f.hidden_field :user_id, :value => current_user.id %>
+						  <%= f.submit 'pick'%>
+						<% end %>
+						
+					<% end %>
 				</div>
 								
-				<% if logged_in? %> 
+				<% if logged_in? %> 			
 					<% if current_user.has_role?('Admin') || item.user.id == current_user.id %>
 						<div class="snuffDetailsAdmin">
 							<%= link_to 'Edit', edit_item_path(item) %>
