@@ -25,7 +25,6 @@ class RolesController < ApplicationController
       else
          redirect_to :action => 'index'
       end
-
    end
    
-   end
+end

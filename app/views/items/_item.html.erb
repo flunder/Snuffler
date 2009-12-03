@@ -27,17 +27,7 @@
 			</div>
 		</div>
 
-		<%= link_to item.name[0,16], item, :class => 'snuffName' %>
-
+		<%= link_to item.name[0,15], item, :class => 'snuffName' %>
 		
-	
-
-		<!--
-		<div class="administr">
-			<%= link_to 'Show', item %>
-	    	<%= link_to 'Edit', edit_item_path(item) %>
-	    	<%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
-		</div>
-		-->
 	</div>
 <% end %>

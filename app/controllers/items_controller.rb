@@ -3,8 +3,8 @@ class ItemsController < ApplicationController
   before_filter :login_required, :only => [:new, :edit, :create, :update, :destroy]
   
   def index
-    
-      @items = Item.find(:all, :order => 'id DESC').paginate(:per_page => 100, :page => params[:page])
+      #experimental limit for later to stop loading all items at once
+      @items = Item.find(:all, :order => 'id DESC', :limit => 50).paginate(:per_page => 50, :page => params[:page])
     
       if request.xhr?
          sleep(3) 
