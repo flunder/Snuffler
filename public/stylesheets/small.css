@@ -319,3 +319,19 @@ text-decoration: none;
 	margin-left: 20px;
 	font-weight: bold;
 }
+
+#collection_submit {
+	border: 0px;
+	font-weight: bold;
+	-moz-border-radius: 15px;
+	background: #eee;
+	color: #555;
+
+margin-top: 19px;
+padding: 5px 10px;
+}
+
+#collection_submit:hover{
+background: #999;
+color: #fff
+}
