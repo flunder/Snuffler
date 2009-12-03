@@ -13,13 +13,22 @@
 					<% if item.from != "" %>
 						<%= link_to 'host', item.from %>
 					<% end %>
-					
+
+	
 					<% if logged_in? %> 
 					
+						<% @myCollection = Collection.find(:first, :conditions => "user_id = '#{current_user.id}' AND item_id = '#{item.id}'") %>
+					
 						<% form_for Collection.new do |f| %>
-						  <%= f.hidden_field :item_id, :value => item.id %>
-						  <%= f.hidden_field :user_id, :value => current_user.id %>
-						  <%= f.submit 'pick'%>
+							<%= f.hidden_field :item_id, :value => item.id %>
+						  	<%= f.hidden_field :user_id, :value => current_user.id %>
+  						  	<% if @myCollection != nil %>
+						  		<!--%= f.hidden_field :state, :value => 'add' %-->						
+    					  		<%= f.submit 'unpick'%>
+						  	<% else %>
+						  		<!--%= f.hidden_field :state, :value => 'remove' %-->						
+     					  		<%= f.submit 'pick'%>
+						  	<% end %>
 						<% end %>
 						
 					<% end %>
