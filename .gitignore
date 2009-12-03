@@ -4,4 +4,7 @@ tmp/**/*
 config/database.yml
 db/*.sqlite3
 system/photos/
+public/system/photos/
+items/
+public/items
 tmp/
