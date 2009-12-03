@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   
   def index
       #experimental limit for later to stop loading all items at once
-      @items = Item.find(:all, :order => 'id DESC', :limit => 50).paginate(:per_page => 50, :page => params[:page])
+      @items = Item.all(:include => :user, :order => 'id DESC', :limit => 50).paginate(:per_page => 50, :page => params[:page])
     
       if request.xhr?
          sleep(3) 
