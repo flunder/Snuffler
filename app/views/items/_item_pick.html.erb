@@ -1,0 +1,17 @@
+<% if logged_in? %> 
+	<% @Collection = Collection.find(:first, :conditions => "user_id = '#{current_user.id}' AND item_id = '#{item.id}'") %>
+	
+	<% if (item.user_id != current_user.id ) %>
+		<% form_for Collection.new do |f| %>
+			<%= f.hidden_field :item_id, :value => item.id %>
+		  	<%= f.hidden_field :user_id, :value => current_user.id %>
+						
+		  	<% if @Collection != nil %>
+		  		<%= f.submit 'unpick', :class => 'pickme' %>
+		  	<% else %>
+		  		<%= f.submit 'pick', :class => 'pickme' %>
+		  	<% end %>
+		<% end %>
+	<% end %>
+	
+<% end %>

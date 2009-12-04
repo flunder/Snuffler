@@ -1,0 +1,8 @@
+	<% if logged_in? %> 			
+		<% if current_user.has_role?('Admin') || item.user.id == current_user.id %>
+			<div class="snuffDetailsAdmin">
+				<%= link_to 'Edit', edit_item_path(item) %>
+				<%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+			</div>
+		<% end %>
+	<% end %>
