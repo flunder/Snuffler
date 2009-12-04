@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   include Authentication
   helper :all # include all helpers, all the time
-  #protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  protect_from_forgery # See ActionController::RequestForgeryProtection for details
   
   #Error pages stuff
   #unless ActionController::Base.consider_all_requests_local

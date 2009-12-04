@@ -14,7 +14,7 @@ $(document).ready(function () {
 				data: ({
 					'item_id' : $(this).parent().children('input').eq(0).get(0).value,
 					'user_id' : $(this).parent().children('input').eq(1).get(0).value, 
-					'authenticity_token' : encodeURIComponent( AUTH_TOKEN ) }),
+					'authenticity_token' : AUTH_TOKEN }),
             	dataType: 'script', 
             	complete: function(request){
             },
