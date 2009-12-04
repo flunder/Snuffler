@@ -18,7 +18,7 @@ class CollectionsController < ApplicationController
       end
        
        respond_to do |format| 
-         format.js { render(:partial => 'items/test') }
+         format.js { render(:partial => 'items/test', :layout => false)}
        end
        
     else

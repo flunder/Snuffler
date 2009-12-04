@@ -1,3 +1,4 @@
+// Mouseovers
 $(document).ready(function () {
 	$(".snuffContentWrap").bind("mouseenter",function(event){
    		$(this).find('img').css({ margin:"-100px 0px 0px 0px", fontWeight:"bolder" });
@@ -6,6 +7,7 @@ $(document).ready(function () {
     });	
 });
 
+// Ajax pick
 $(document).ready(function () {
 	$('.pickme').click(function(){ 
 	
@@ -24,11 +26,5 @@ $(document).ready(function () {
 		return false;
 	});
 });
-
-/*{"collection"=>{"item_id"=>"3",
- "user_id"=>"1"},
- "commit"=>"unpick",
- "authenticity_token"=>"L+8SpCzREUvtLkjxQLe1DKq7NaaU8xdW2YR77xbl3Sw="}
-*/
 
 //http://docs.jquery.com/Plugins/livequery#Download
