@@ -14,11 +14,11 @@ class CollectionsController < ApplicationController
       if collection
         Collection.destroy(collection.id)
       else
-        Collection.create(:user_id => params[:user_id],:item_id => params[:item_id] )
+        Collection.create(:user_id => params[:user_id], :item_id => params[:item_id])
       end
        
        respond_to do |format| 
-         format.js { render(:partial => 'items/test', :layout => false)}
+         format.js { render(:partial => 'js/pick', :layout => false)}
        end
        
     else

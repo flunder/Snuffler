@@ -85,7 +85,4 @@ class ItemsController < ApplicationController
     end
   end
   
-  def pick
-  end
-  
 end

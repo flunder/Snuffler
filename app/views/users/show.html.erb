@@ -5,6 +5,7 @@
 <% end %>
 
 <%= render(:partial => "items/item", :collection => @items) %>
+<%= render(:partial => "items/item", :collection => @collectionArray) %>
 
 <%= will_paginate(@items) %>
 <%= pageless(@items.total_pages, items_path) %>

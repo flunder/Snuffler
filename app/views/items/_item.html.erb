@@ -1,49 +1,18 @@
 <% if item.photo.exists? then %>
 
 	<div class="snuffWrap">
-		
 		<div class="snuffContentWrap" id="snuffle-<%=item.id%>">
 			<%= link_to (image_tag item.photo.url(:thumb)), item, :class => 'snuffImg' %>
 			<div class="snuffDetails">
-				
 				<div class="snuffDetailsFrom">
-					
 					<%= link_to item.user.username, user_path(item.user) %>
-					
-					<% if item.from != "" %>
-						<%= link_to 'host', item.from %>
-					<% end %>
-	
-					<% if logged_in? %> 
-					
-						<% @myCollection = Collection.find(:first, :conditions => "user_id = '#{current_user.id}' AND item_id = '#{item.id}'") %>
-					
-						<% form_for Collection.new do |f| %>
-							<%= f.hidden_field :item_id, :value => item.id %>
-						  	<%= f.hidden_field :user_id, :value => current_user.id %>
-  						  	<% if @myCollection != nil %>
-    					  		<%= f.submit 'unpick', :class => 'pickme' %>
-						  	<% else %>
-     					  		<%= f.submit 'pick', :class => 'pickme' %>
-						  	<% end %>
-						<% end %>
-						
-					<% end %>
+					<%= link_to 'host', item.from if item.from != "" -%>
+					<%= render(:partial => "items/item_pick", :locals => { :item => item })%>
 				</div>
-								
-				<% if logged_in? %> 			
-					<% if current_user.has_role?('Admin') || item.user.id == current_user.id %>
-						<div class="snuffDetailsAdmin">
-							<%= link_to 'Edit', edit_item_path(item) %>
-							<%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
-						</div>
-					<% end %>
-				<% end %>
-				
+				<!--%= render(:partial => "items/item_moderate", :locals => { :item => item })%-->
 			</div>
 		</div>
-
 		<%= link_to item.name[0,15], item, :class => 'snuffName' %>
-		
 	</div>
+	
 <% end %>

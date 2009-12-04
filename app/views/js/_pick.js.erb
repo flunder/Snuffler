@@ -1,0 +1,10 @@
+var newState;
+var oldState = $('#snuffle-<%= params[:item_id] %> #collection_submit').attr('value');
+
+if (oldState == 'pick') {
+	newState = 'unpick'
+} else {
+	newState = 'pick'
+}
+
+$('#snuffle-<%= params[:item_id] %> #collection_submit').attr('value', newState);

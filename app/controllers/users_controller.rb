@@ -9,7 +9,17 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id]) 
+    
+    # Added items
     @items = @user.items.find(:all, :order => 'id DESC').paginate(:per_page => 100, :page => params[:page])
+    
+    # Favoured items
+    @collectionArray = Array.new() 
+    @collectionItemIDs = Collection.find(:all, :conditions => "user_id = '#{@user.id}'") 
+    
+    @collectionItemIDs.each do |collectionItem|
+    	@collectionArray.push(Item.find_by_id(collectionItem.item_id))
+    end
   end
   
   def create

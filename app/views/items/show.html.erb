@@ -7,13 +7,8 @@
 	<p> Whae? There are no photo's attached!</p>
 <% end %>
 
-<% if @item.from != "" %>
-	<%= link_to 'host', @item.from %>
-<% end %>
-
-<% if logged_in? %> 
-	<%= link_to 'Edit', edit_item_path(@item) %>
-<% end %>	
-
+<%= link_to 'Host', @item.from if @item.from != "" %>
+<%= link_to 'Edit', edit_item_path(@item) if logged_in?  %>
+<%= link_to 'Destroy', @item, :confirm => 'Are you sure?', :method => :delete %>
 <%= link_to 'Back', items_path %>
 	
