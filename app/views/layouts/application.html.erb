@@ -12,14 +12,10 @@
   </head>
 
   <body>
-	<%= render(:partial => "layouts/header") %>
-	
-	<%- flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-    <%- end -%>
-
+	<%= render "layouts/header" %>
+ 	<%= render "layouts/notifications" %>
     <div id="results">
-      <%= yield  %>
+		<%= yield  %>
     </div>
 
   </body>
