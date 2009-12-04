@@ -1,4 +1,6 @@
-<h2><%=h @user.username %></h2>
+<% content_for :localnav do %>
+	<h2><%=h @user.username.capitalize %>'s Snuffles</h2>
+<% end %>
 
 <% if logged_in? %>  
 	<%= link_to 'New', new_item_path, :id => 'newSnuff' %>

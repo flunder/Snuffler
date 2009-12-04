@@ -1,4 +1,7 @@
-<h2><%=h @item.name %></h2>
+<% content_for :localnav do %>
+	<h2><%=h @item.name %></h2>
+<% end %>
+
 <%=h @item.image_remote_url %>
 
 <% if @item.photo.exists? then %>

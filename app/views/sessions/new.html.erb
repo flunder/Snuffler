@@ -1,5 +1,9 @@
 <% title "Log in" %>
 
+<% content_for :localnav do %>
+	<h2>Log in</h2>
+<% end %>
+
 <p>Don't have an account? <%= link_to "Sign up!", signup_path %></p>
 
 <% form_tag sessions_path do %>
