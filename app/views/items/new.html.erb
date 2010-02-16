@@ -4,7 +4,7 @@
 <% if logged_in? %>  
 	<% form_for(@item, :html => { :multipart => true, :id => 'snuffForm' }) do |f| %>
 		<%= render :partial => 'form', :locals => { :f => f } %> 
-		<% end %>
+	<% end %>
 <% else %>
 	Please login to snuffle!
 <% end %>

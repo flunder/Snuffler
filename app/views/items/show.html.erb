@@ -10,6 +10,13 @@
 	<p> Whae? There are no photo's attached!</p>
 <% end %>
 
+<div id="showTags">
+	<strong>Tags:</strong> 
+	<% for tag in @item.tags %> 
+		<%= link_to tag.name, items_path(:view =>'tag', :tag => tag.name) %>
+	<% end %>
+</div>
+
 <%= link_to 'Host', @item.from if @item.from != "" %>
 
 <% if logged_in? %> 

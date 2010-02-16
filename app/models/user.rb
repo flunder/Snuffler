@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :items
   has_and_belongs_to_many :roles
   has_one :collection
+  acts_as_tagger  
   
   attr_accessor :password
   before_save :prepare_password

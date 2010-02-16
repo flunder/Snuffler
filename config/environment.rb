@@ -37,6 +37,7 @@ Rails::Initializer.run do |config|
   config.gem "pauldix-feedzirra", :lib => "feedzirra", :source => "http://gems.github.com"
   config.gem 'thoughtbot-paperclip', :lib => 'paperclip', :source => 'http://gems.github.com'   
   config.gem 'mislav-will_paginate', :version => '~> 2.3.11', :lib => 'will_paginate', :source => 'http://gems.github.com'
+  config.gem "acts-as-taggable-on", :source => "http://gemcutter.org"     
        
   config.time_zone = 'UTC'
 

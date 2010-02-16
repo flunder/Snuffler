@@ -3,7 +3,8 @@ require 'open-uri'
 class Item < ActiveRecord::Base
 
   belongs_to :user
-  
+  acts_as_taggable_on :tags
+    
   # Paperclip
   has_attached_file :photo,
     :styles => {

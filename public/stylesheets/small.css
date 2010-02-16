@@ -335,3 +335,8 @@ padding: 5px 10px;
 background: #999;
 color: #fff
 }
+
+#results #showTags a {
+color: #00AEEF;
+text-decoration: none;
+}
