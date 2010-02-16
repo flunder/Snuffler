@@ -4,7 +4,13 @@ class ItemsController < ApplicationController
   
   def index
       #experimental limit for later to stop loading all items at once
-      @items = Item.all(:include => :user, :order => 'id DESC', :limit => 50).paginate(:per_page => 50, :page => params[:page])
+      
+      @headline = "";
+      
+      @items = Item.all(
+          :include => :user, 
+          :order => 'id DESC', 
+          :limit => 50).paginate(:per_page => 50, :page => params[:page])
     
       if request.xhr?
          sleep(3) 
@@ -17,6 +23,16 @@ class ItemsController < ApplicationController
         end
       end
    end
+
+  def tag
+    @headline = "Tag: #{params[:id]}"
+    @items = Item.find_tagged_with(params[:id]).paginate(:per_page => 50, :page => params[:page])
+    render :action => 'index'
+  end
+
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
+  end
   
 
   def show
