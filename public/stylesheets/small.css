@@ -1,17 +1,48 @@
-#newSnuff {
-text-decoration: none;
-font-size: 2em;
-padding-top: 42px !important;
-text-align: center;
+
+
+.clear {
+clear: both;
+}
+
+#showWrap {
+overflow: auto;
 float: left;
-width: 100px;
-height: 55px !important;
-font-weight: bold;
-color: #009acd;
+margin-bottom: 10px;
+}
+
+#results h2 {
+margin-bottom: -17px;
+}
+
+#topOptions .topOptionsLeft {
+float: left;
+}
+
+#topOptions .topOptionsRight {
+float: right;
+}
+
+#showImageWrap {
+}
+
+#topOptions {
+padding: 1px;
+}
+
+#newSnuff {
+	text-decoration: none;
+	font-size: 2em;
+	padding-top: 42px !important;
+	text-align: center;
+	float: left;
+	width: 100px;
+	height: 55px !important;
+	font-weight: bold;
+	color: #009acd;
 }
 
 .snuffDetailsFrom {
-height: 70px;
+	height: 70px;
 }
 
 .snuffDetailsAdmin {
@@ -47,10 +78,12 @@ pre {
 }
 
 a {
-	color: #000;
+	color: #00AEEF;
+	text-decoration: none;
 }
 a:visited {
-	color: #666;
+	color: #00AEEF;
+
 }
 a:hover {
 	text-decoration: underline;
@@ -150,7 +183,10 @@ a:hover {
 
 
 
-
+#snuffForm #sF_private {
+margin-top: 4px;
+width: 20px !important;
+}
 
 
 

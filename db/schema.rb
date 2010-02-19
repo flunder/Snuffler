@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100216122326) do
+ActiveRecord::Schema.define(:version => 20100219175456) do
 
   create_table "collections", :force => true do |t|
     t.string   "user_id"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20100216122326) do
     t.text     "from"
     t.text     "type"
     t.integer  "user_id"
+    t.text     "private"
   end
 
   create_table "roles", :force => true do |t|

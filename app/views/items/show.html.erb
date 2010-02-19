@@ -2,20 +2,30 @@
 	<h2><%=h @item.name %></h2>
 <% end %>
 
-<%=h @item.image_remote_url %>
+<div id="showWrap">
+	<% if @item.photo.exists? then %>
+		<div id="showImageWrap">
+			<div id="topOptions">
+				<div class="topOptionsLeft"></div>
+				<div class="topOptionsRight"><%= link_to('View Original',@item.photo.url(:original))%></div>
+			</div>
+			<%= image_tag @item.photo.url(:large) %>
+		</div>
+	<% else %>
+		<p> Whae? There are no photo's attached!</p>
+	<% end %>
 
-<% if @item.photo.exists? then %>
-	<p><%= image_tag @item.photo.url(:large) %></p>
-<% else %>
-	<p> Whae? There are no photo's attached!</p>
-<% end %>
-
-<div id="showTags">
-	<strong>Tags:</strong> 
-	<% for tag in @item.tags %> 
-		<%= link_to tag.name, :action => 'tag', :id => tag.name %>
+	<% if @item.tags.empty? != true %>
+		<div id="showTags">
+			<strong>Tags:</strong> 
+			<% for tag in @item.tags %> 
+				<%= link_to tag.name, :action => 'tag', :id => tag.name %>
+			<% end %>
+		</div>
 	<% end %>
 </div>
+
+<div class="clear"> </div>
 
 <%= link_to 'Host', @item.from if @item.from != "" %>
 
@@ -27,4 +37,6 @@
 <% end %>
 
 <%= link_to 'Back', items_path %>
+
+
 	

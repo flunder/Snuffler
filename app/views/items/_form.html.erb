@@ -37,6 +37,11 @@
 </div>
 
 <div class="row">
+     <%= f.label :private, 'Private?' %>
+     <%= f.check_box :private, :id => 'sF_private' %>
+</div>
+
+<div class="row">
 	<%= f.label 'Tag List (Delimiter = ,)' %>
 	<%= f.text_field :tag_list %>
 </div>
