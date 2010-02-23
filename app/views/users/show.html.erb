@@ -2,16 +2,17 @@
 	<h2><%=h @user.username.capitalize %>'s Snuffles</h2>
 <% end %>
 
-<% if logged_in? %>  
-	<%= link_to 'New', new_item_path, :id => 'newSnuff' %>
-<% end %>
+<div>
+	<h3>Snuffles:</h3>
+	<% if logged_in? %>  
+		<%= link_to 'New', new_item_path, :id => 'newSnuff' %>
+	<% end %>	
+	<%= render(:partial => "items/item", :collection => @items) %>
+</div>
 
-My Snuffles:
-<%= render(:partial => "items/item", :collection => @items) %>
-My Favs:
-<%= render(:partial => "items/item", :collection => @collectionArray) %>
-
-<%= will_paginate(@items) %>
-<%= pageless(@items.total_pages, items_path) %>
+<div>
+	<h3>Favs:</h3>
+	<%= render(:partial => "items/item", :collection => @collectionArray) %>
+</div>
 
 <%= link_to "&lt; Back", :back %>

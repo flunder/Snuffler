@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
         @bodyClass = 'snufflr_item'; 
       elsif (controller_name == 'users' && action_name == 'show') 
         @bodyClass = 'snufflr_user'; 
+      else 
+        @bodyClass = ''; 
       end
     end
   

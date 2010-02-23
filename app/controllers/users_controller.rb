@@ -18,10 +18,7 @@ class UsersController < ApplicationController
     @collectionItemIDs = Collection.find(:all, :conditions => "user_id = '#{@user.id}'") 
     
     @collectionItemIDs.each do |collectionItem|
-    # Skip items that were favored and then deleted, stop exeptions
-      if collectionItem.item_id.empty?
-    	  @collectionArray.push(Item.find_by_id(collectionItem.item_id))
-    	end
+  	  @collectionArray.push(Item.find_by_id(collectionItem.item_id))
     end
   end
   
