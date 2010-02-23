@@ -6,7 +6,9 @@
 	<%= link_to 'New', new_item_path, :id => 'newSnuff' %>
 <% end %>
 
+My Snuffles:
 <%= render(:partial => "items/item", :collection => @items) %>
+My Favs:
 <%= render(:partial => "items/item", :collection => @collectionArray) %>
 
 <%= will_paginate(@items) %>

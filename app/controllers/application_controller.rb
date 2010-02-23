@@ -5,6 +5,19 @@ class ApplicationController < ActionController::Base
   include Authentication
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+
+  before_filter :getBodyClass
+
+  private
+    def getBodyClass
+      if (controller_name == 'items' && action_name == 'index') 
+        @bodyClass = 'snufflr_home';
+      elsif (controller_name == 'items' && action_name == 'show') 
+        @bodyClass = 'snufflr_item'; 
+      elsif (controller_name == 'users' && action_name == 'show') 
+        @bodyClass = 'snufflr_user'; 
+      end
+    end
   
   #Error pages stuff
   #unless ActionController::Base.consider_all_requests_local
