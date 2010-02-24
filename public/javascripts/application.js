@@ -1,10 +1,9 @@
-// Mouseovers
 $(document).ready(function () {
 	$(".snuffContentWrap").bind("mouseenter",function(event){
-   		$(this).find('img').css({ margin:"-100px 0px 0px 0px", fontWeight:"bolder" });
-    }).bind("mouseleave",function(event){
-		$(this).find('img').css({ margin:"0px 0px 0px 0px", fontWeight:"bolder" });
-    });	
+   	$(this).find('img').animate({ marginTop : "-=100px" }, 150 ); 
+  }).bind("mouseleave",function(event){
+		$(this).find('img').animate({ marginTop : "+=100px" }, 400 ); 
+	})
 });
 
 // Ajax pick
