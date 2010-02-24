@@ -3,18 +3,36 @@
 <% end %>
 
 <div id="showWrap">
+	
+	<!-- Display the Snuffl -->
+	<!-- Zitat: So if you're using current_page? in a view or in another helper,
+		 you're on the right track, in terms of "doing the right thing". -->
+	
 	<% if @item.photo.exists? then %>
 		<div id="showImageWrap">
 			<div id="topOptions">
 				<div class="topOptionsLeft"></div>
-				<div class="topOptionsRight"><%= link_to('View Original',@item.photo.url(:original))%></div>
+				<div class="topOptionsRight">
+					<% if current_page?(:view => 'original')  %>
+					<%= link_to('View Normal' )%>
+					<% else %>
+					<%= link_to('View Original', :view => "original" )%>
+					<% end %>
+				</div>
 			</div>
-			<%= image_tag @item.photo.url(:large) %>
+			<!-- handle normal / original view -->
+			<% current_page?(:view => 'original')? @size = :original : @size = :large %>
+			<% if current_page?(:view => 'original')  %>
+			<%= link_to( image_tag(@item.photo.url(@size)))%>
+			<% else %>
+			<%= link_to( image_tag(@item.photo.url(@size)), :view => "original")%>
+			<% end %>
 		</div>
 	<% else %>
-		<p> Whae? There are no photo's attached!</p>
+		<p>There are no photo's attached!</p>
 	<% end %>
 
+	<!-- Tags -->
 	<% if @item.tags.empty? != true %>
 		<div id="showTags">
 			<strong>Tags:</strong> 
@@ -23,6 +41,7 @@
 			<% end %>
 		</div>
 	<% end %>
+	
 </div>
 
 <div class="clear"> </div>

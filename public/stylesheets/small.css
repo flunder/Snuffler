@@ -12,6 +12,10 @@ float: left;
 margin-bottom: 10px;
 }
 
+#showImageWrap a img {
+border: 0px;
+}
+
 #snufflr_item #results h2 {
 margin-bottom: -17px;
 }
