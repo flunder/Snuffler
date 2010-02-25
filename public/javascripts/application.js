@@ -1,9 +1,14 @@
 $(document).ready(function () {
+	
+	var range;
+	if ($('#results > div').attr('class') != 'snuffWrapLarge') { range = 100; } else { range = 150; }
+	
 	$(".snuffContentWrap").bind("mouseenter",function(event){
-   	$(this).find('img').animate({ marginTop : "-=100px" }, 150 ); 
+   	$(this).find('img').animate({ marginTop : "-="+range }, 150 ); 
   }).bind("mouseleave",function(event){
-		$(this).find('img').animate({ marginTop : "+=100px" }, 400 ); 
+		$(this).find('img').animate({ marginTop : "+="+range }, 400 ); 
 	})
+	
 });
 
 // Ajax pick
