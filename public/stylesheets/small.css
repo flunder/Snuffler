@@ -98,11 +98,13 @@ body {
 .snuffWrap .snuffDetails .seethrough{height:100px;width:100px;background-color:#222;filter:alpha(opacity=80);opacity:0.8;-moz-opacity:0.80;z-index:10;}
 .snuffWrap .snuffDetailsFrom{padding:10px;height:70px;position:relative;top:-100px;}
 .snuffWrap .snuffDetailsFrom a{color:#fff !important;clear:left;}
+.snuffWrap .snufflrAva a{}
 .snuffWrap .snuffDetailsAdmin{width:100px;}
 .snuffWrap .snuffDetailsAdmin a{color:#bbb !important;margin-right:17px;font-weight:bold;text-decoration:none;}
 .snuffWrap .snuffDetailsAdmin a:hover{color:#333 !important;}
 .snuffWrap #collection_submit{border:0px;font-weight:bold;-moz-border-radius:15px;background:#eee;color:#555;margin-top:43px;padding:5px 10px;}
 .snuffWrap #collection_submit:hover{background:#999;color:#fff}
+#newSnuff.small {text-decoration:none;font-size:2em;padding-top:42px;text-align:center;float:left;height:55px;font-weight:bold;color:#009acd;-moz-border-radius:5px;background: white;}
 
 .snuffWrapLarge {width:200px;float:left;margin:5px;background:#efefef;background:#fff; padding: 0px 5px 0px 5px;-moz-border-radius:5px;}
 .snuffWrapLarge .snuffContentWrap{overflow:hidden;height:200px;}
@@ -115,37 +117,14 @@ body {
 .snuffWrapLarge .snuffDetails{background:#ddd;height:200px;width:200px;color:#eee;float:left;overflow:hidden;line-height:13px;}
 .snuffWrapLarge .snuffDetails .seethrough{height:200px;width:200px;background-color:#222;filter:alpha(opacity=80);opacity:0.8;-moz-opacity:0.80;z-index:10;}
 .snuffWrapLarge .snuffDetailsFrom{height:70px;position:relative;top:-200px; }
-.snuffWrapLarge
-.snufflrAva a {
-display: block;
-padding: 0px;
-height: 40px;
-background: red;
-width: 40px;
-clear: both;
-float: left;
-margin-right: 5px;
-}
-
 .snuffWrapLarge .snuffDetailsFrom a{color:#fff !important;clear:left;}
+.snuffWrapLarge .snufflrAva a{display:block;padding:0px;height:40px;background:red;width:40px;clear:both;float:left;margin-right:5px;}
 .snuffWrapLarge .snuffDetailsAdmin{}
 .snuffWrapLarge .snuffDetailsAdmin a{}
 .snuffWrapLarge .snuffDetailsAdmin a:hover{}
-.snuffWrapLarge #collection_submit{border:0px;font-weight:bold;-moz-border-radius:15px;background:#eee;color:#555;margin-top:43px;padding:5px 10px;}
+.snuffWrapLarge #collection_submit{border:0px;font-weight:bold;-moz-border-radius:15px;background:#eee;color:#555;padding:5px 10px;float: right; margin: -5px 5px 0px 0px; }
 .snuffWrapLarge #collection_submit:hover{background:#999;color:#fff}
-
-
-#newSnuff {
-	text-decoration: none;
-	font-size: 2em;
-	padding-top: 42px !important;
-	text-align: center;
-	float: left;
-	width: 100px;
-	height: 55px !important;
-	font-weight: bold;
-	color: #009acd;
-}
+#newSnuff.large {text-decoration:none;font-size:2em;padding-top:92px;text-align:center;float:left;width:198px;height:130px;font-weight:bold;color:#009acd;-moz-border-radius:5px;background: white;}
 
 /* Snufflr_Item */
 #snufflr_item #results #showTags a{color:#00AEEF;text-decoration:none;}

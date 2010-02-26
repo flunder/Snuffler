@@ -3,7 +3,7 @@
 <% end %>
 
 <% if logged_in? %>  
-	<%= link_to 'New', new_item_path, :id => 'newSnuff' %>
+	<%= link_to 'New', new_item_path, :id => 'newSnuff', :class => @viewSize %>
 <% end %>
 
 <%= render(:partial => "item", :collection => @items) %>

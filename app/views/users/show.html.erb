@@ -3,9 +3,8 @@
 <% end %>
 
 <div>
-	<h3>Snuffles:</h3>
 	<% if logged_in? %>  
-		<%= link_to 'New', new_item_path, :id => 'newSnuff' %>
+		<%= link_to 'New', new_item_path, :id => 'newSnuff', :class => @viewSize %>
 	<% end %>	
 	<%= render(:partial => "items/item", :collection => @items) %>
 </div>

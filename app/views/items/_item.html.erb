@@ -8,7 +8,7 @@
 				<div class="snuffDetails" style="background: url('<%=item.photo.url(:thumb)%>')">
 					<div class="seethrough"></div>
 					<div class="snuffDetailsFrom">
-						<%= link_to item.user.username, user_path(item.user) %>
+						<%= link_to item.user.username, user_path(item.user, :size => @viewSize) %>
 						<%= link_to 'host', item.from if item.from != "" -%>
 						<%= render(:partial => "items/item_pick", :locals => { :item => item })%>
 					</div>
