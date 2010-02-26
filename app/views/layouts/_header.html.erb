@@ -3,6 +3,12 @@
 	
 	<div id="snuffles">
 		<div id="snufflesAll"><%=link_to "%05d" % Item.all.size, root_url %></div>
+		<div id="switchSize">
+			<ul>
+				<li><%=link_to('small')%></li>
+				<li><%=link_to('large', :size => 'large')%></li>
+			</ul>
+		</div>
 		<% if logged_in? %>
 			<div id="snufflesMine">(<%= link_to current_user.items.size, user_path(current_user) %>)</div> 
 		<% end %>	
