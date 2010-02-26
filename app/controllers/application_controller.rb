@@ -20,6 +20,15 @@ class ApplicationController < ActionController::Base
         @bodyClass = ''; 
       end
     end
+
+    def getThumbnailSize
+      if params[:size] == 'large'
+        @viewSize = 'large'
+      else 
+        @viewSize = 'small'
+      end
+      puts "SIZE: #{@viewSize}"
+    end
   
   #Error pages stuff
   #unless ActionController::Base.consider_all_requests_local

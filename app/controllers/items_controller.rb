@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   
   before_filter :login_required, :only => [:new, :edit, :create, :update, :destroy]
+  before_filter :getThumbnailSize
   
   def index
       #experimental limit for later to stop loading all items at once

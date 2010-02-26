@@ -1,6 +1,6 @@
 <% if item.photo.exists? %>
 
-	<% if @view == 'small' %>
+	<% if @viewSize == 'small' %>
 	
 		<div class="snuffWrap">
 			<div class="snuffContentWrap" id="snuffle-<%=item.id%>">
@@ -17,7 +17,7 @@
 			<%= link_to item.name[0,15], item, :class => 'snuffName' %>
 		</div>
 		
-	<% elsif @view == 'large' %>
+	<% elsif @viewSize == 'large' %>
 		
 		<div class="snuffWrapLarge">
 			<div class="snuffContentWrap" id="snuffle-<%=item.id%>">
@@ -25,7 +25,9 @@
 				<div class="snuffDetails" style="background: url('<%=item.photo.url(:medium)%>')">
 					<div class="seethrough"></div>
 					<div class="snuffDetailsFrom">
-						<%= link_to item.user.username, user_path(item.user) %>
+						<div class="snufflrAva">
+							<%= link_to item.user.username, user_path(item.user) %>
+						</div>
 						<%= link_to 'host', item.from if item.from != "" -%>
 						<%= render(:partial => "items/item_pick", :locals => { :item => item })%>
 					</div>

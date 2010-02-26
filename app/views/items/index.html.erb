@@ -6,13 +6,6 @@
 	<%= link_to 'New', new_item_path, :id => 'newSnuff' %>
 <% end %>
 
-<!-- handle thumbnail sizes -->
-<% if current_page?(:size => 'large')  %>
-	<% @view = 'large' %>
-<% else %>
-	<% @view = 'small' %>
-<% end %>
-
 <%= render(:partial => "item", :collection => @items) %>
 
 <%= will_paginate(@items) %>

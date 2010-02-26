@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_filter :check_administrator_role,
                 :only => [:destroy]
   
+  before_filter :getThumbnailSize
+  
   def new
     @user = User.new
   end

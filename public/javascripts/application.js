@@ -1,12 +1,12 @@
 $(document).ready(function () {
 	
 	var range;
-	if ($('#results > div').attr('class') != 'snuffWrapLarge') { range = 100; } else { range = 150; }
+	if ($('#results > div').attr('class') != 'snuffWrapLarge') { range = 100; } else { range = 40; }
 	
 	$(".snuffContentWrap").bind("mouseenter",function(event){
-   	$(this).find('img').animate({ marginTop : "-="+range }, 150 ); 
+   	$(this).find('img').animate({ marginTop : "-="+range }, 100 ); 
   }).bind("mouseleave",function(event){
-		$(this).find('img').animate({ marginTop : "+="+range }, 400 ); 
+		$(this).find('img').animate({ marginTop : "+="+range }, 300 ); 
 	})
 	
 });
