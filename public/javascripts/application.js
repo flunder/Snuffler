@@ -1,16 +1,34 @@
 $(document).ready(function () {
 	
-	var range;
-	// grab the 1st div[class*="snuff"] to figure out which view-mode we are on
-	if ($('#results div[class*="snuff"]').attr('class') != 'snuffWrapLarge') { range = 100; } else { range = 40; }
+	range = 0; // initalize global var
+	var interval;
 	
-	$(".snuffContentWrap").bind("mouseenter",function(event){
-   	$(this).find('img').animate({ marginTop : "-="+range }, 100 ); 
-  }).bind("mouseleave",function(event){
-		$(this).find('img').animate({ marginTop : "+="+range }, 300 ); 
-	})
+	if ($('#results div[class*="snuff"]').attr('class') != 'snuffWrapLarge') { 
+		interval = 0;
+		range = 100; 
+	} else { 
+		interval = 700;
+		range = 40; 
+	}
 	
+	var config = {    
+	     sensitivity: 3, // number = sensitivity threshold (must be 1 or higher)    
+	     interval: interval, // number = milliseconds for onMouseOver polling interval    
+	     over: pullUp, 
+	     timeout: 500, // number = milliseconds delay before onMouseOut    
+	     out: pullDown 
+	};
+	
+	$(".snuffName").hoverIntent(config)	
 });
+
+function pullUp() {
+	$(this).parent().find('img').animate({ marginTop : "-="+range }, 100 ); 
+}
+
+function pullDown() {
+  	$(this).parent().find('img').animate({ marginTop : "+="+range }, 300 ); 
+}
 
 // Ajax pick
 $(document).ready(function () {
