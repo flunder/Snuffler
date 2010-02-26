@@ -26,14 +26,14 @@
 					<div class="seethrough"></div>
 					<div class="snuffDetailsFrom">
 						<div class="snufflrAva">
-							<%= link_to item.user.username, user_path(item.user) %>
+							<%= link_to(item.user.username, user_path(item.user, :size => @viewSize)) %>
 						</div>
 						<%= link_to 'host', item.from if item.from != "" -%>
 						<%= render(:partial => "items/item_pick", :locals => { :item => item })%>
 					</div>
 				</div>
 			</div>
-			<%= link_to item.name[0,15], item, :class => 'snuffName' %>
+			<%= link_to item.name[0,40], item, :class => 'snuffName' %>
 		</div>	
 				
 	<% end %>

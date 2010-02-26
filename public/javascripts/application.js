@@ -1,7 +1,8 @@
 $(document).ready(function () {
 	
 	var range;
-	if ($('#results > div').attr('class') != 'snuffWrapLarge') { range = 100; } else { range = 40; }
+	// grab the 1st div[class*="snuff"] to figure out which view-mode we are on
+	if ($('#results div[class*="snuff"]').attr('class') != 'snuffWrapLarge') { range = 100; } else { range = 40; }
 	
 	$(".snuffContentWrap").bind("mouseenter",function(event){
    	$(this).find('img').animate({ marginTop : "-="+range }, 100 ); 
