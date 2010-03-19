@@ -9,4 +9,4 @@
 <%= render(:partial => "item", :collection => @items) %>
 
 <%= will_paginate(@items) %>
-<%= pageless(@items.total_pages, items_path) %>
+<%= pageless(@items, items_path) %>

@@ -10,8 +10,7 @@ class ItemsController < ApplicationController
       
       @items = Item.all(
           :include => :user, 
-          :order => 'id DESC', 
-          :limit => 50).paginate(:per_page => 50, :page => params[:page])
+          :order => 'id DESC').paginate(:per_page => 50, :page => params[:page])
     
       if request.xhr?
          sleep(3) 
@@ -101,5 +100,34 @@ class ItemsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def test
+  
+  #enable me first!  
+    
+=begin
+    require 'faker'
+    
+    items = []
+    1000.times do 
+      items.push [Faker::Name.first_name, Faker::Lorem.paragraph(sentence_count = 3)]
+    end
+    
+    items.each do |item|
+      Item.create(
+        :name => item[0],
+        :photo_file_name => "Bikeshed_London.png",
+        :photo_content_type => "image/png",
+        :photo_file_size => "3111967",
+        :blurber => item[1],
+        :from => "www.bikeshd.co.uk",
+        :user_id => "2"   
+      ) 
+    end
+    
+    @result = items;
+=end
+  end  
+    
   
 end

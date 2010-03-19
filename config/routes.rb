@@ -20,6 +20,8 @@ ActionController::Routing::Routes.draw do |map|
     users.resources :roles
   end
 
+  map.connect '/test', :controller => 'items', :action => 'test'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
