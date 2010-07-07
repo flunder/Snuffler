@@ -15,10 +15,18 @@
 
 	<%= render "layouts/header" %>
  	<%= render "layouts/notifications" %>
-    <div id="results">
-		<%= yield :localnav %>
-		<%= yield  %>
-    </div>
+
+	<div id="page">
+		<div id="col1">
+    		<div id="results">
+				<%= yield :localnav %>
+				<%= yield  %>
+    		</div>	
+    	</div>
+		<div id="col2">
+			<%= yield :col2 %>
+		</div>
+	</div>
 
 	<script type="text/javascript">
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

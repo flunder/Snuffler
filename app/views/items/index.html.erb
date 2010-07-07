@@ -1,5 +1,7 @@
 <% content_for :localnav do %>
-	<h2><%=@headline%></h2>
+	<% if !@headline.empty? %>
+		<h2><%=@headline%></h2>
+	<% end %>
 <% end %>
 
 <% if logged_in? %>  

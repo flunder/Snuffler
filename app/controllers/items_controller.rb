@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
       
       @items = Item.all(
           :include => :user, 
-          :order => 'id DESC').paginate(:per_page => 100, :page => params[:page])
+          :order => 'id DESC').paginate(:per_page => 6, :page => params[:page])
     
       if request.xhr?
          sleep(1) 

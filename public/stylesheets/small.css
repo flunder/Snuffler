@@ -37,14 +37,14 @@ body {
 #header { clear:both;margin:0 auto 21px;padding-top:56px;position:relative;width:960px;}
 #header h1 { float: left; }
 #header h1 a {
-background:url("/images/logo.png") no-repeat scroll 0 0 transparent;
-float:left;
-height:39px;
-margin-left:10px;
-color:black;font-size:1.3em;
-text-indent:-7777px;
-width: 140px;
-opacity:0.85;
+	background:url("/images/logo.png") no-repeat scroll 0 0 transparent;
+	float:left;
+	height:39px;
+	margin-left:10px;
+	color:black;font-size:1.3em;
+	text-indent:-7777px;
+	width: 140px;
+	opacity:0.85;
 }
 #header h1 a:hover {text-decoration:none;	opacity:1}
 #header #snuffles #snufflesAll,
@@ -55,7 +55,8 @@ opacity:0.85;
 #header #userWrap #user{position:relative;right:10px;top:20px;}
 #header #userWrap #user .login,
 #header #userWrap #user .signup {
-  -moz-border-radius:6px 6px 6px 6px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
 	background-color:#ddd;
 	display:inline-block;
 	font-weight:bold;
@@ -95,32 +96,51 @@ opacity:0.85;
 #snuffForm #sF_private{margin-top:4px;width:20px !important;}
 
 /* # Results wrapper on every page */
-#results {
-	-moz-border-radius:6px 6px 6px 6px;
-	background:none repeat scroll 0 0 white;
-	clear:both;
+
+#page {
 	margin:0 auto 21px;
-	padding:20px;
 	position:relative;
-	width:920px;
+	clear:both;
+  width:960px;
 }
 
-#results #navOption a {
+
+#col1 {
+	width: 700px; float: left;
+}
+
+#col2 {
+	width: 170px; float: right;
+}
+
+#page #col1,
+#page #col2{
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	background:none repeat scroll 0 0 white;
+	padding:20px;
+
+}
+
+
+#page #results {}
+
+#page #results #navOption a {
 	color:#FFFFFF;
 	display:block;
 	padding:6px 11px;
 	text-decoration:none;
 }
 
-#results #navOption {}
-
-#results #navOption .back,
-#results #navOption .edit,
-#results #navOption .destroy, 
-#results #navOption .prev, 
-#results #navOption .host, 
-#results #navOption .next {
-	-moz-border-radius:6px 6px 6px 6px;
+#page #results #navOption {}
+#page #results #navOption .back,
+#page #results #navOption .edit,
+#page #results #navOption .destroy, 
+#page #results #navOption .prev, 
+#page #results #navOption .host, 
+#page #results #navOption .next {
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
 	display:inline-block;
 	background-color:#000000;
 	font-weight:bold;
@@ -130,23 +150,23 @@ opacity:0.85;
 	margin-right: 5px;
 }
 
-#results #navOption .host {
+#page #results #navOption .host {
 	background:url("/images/ihome.png") no-repeat scroll 7px 6px #CCCCCC;
 	text-indent:-7777px;
 	width:32px;
 }
 
-#results #navOption .back:hover,
-#results #navOption .edit:hover,
-#results #navOption .destroy:hover, 
-#results #navOption .prev:hover, 
-#results #navOption .host:hover, 
-#results #navOption .next:hover {
+#page #results #navOption .back:hover,
+#page #results #navOption .edit:hover,
+#page #results #navOption .destroy:hover, 
+#page #results #navOption .prev:hover, 
+#page #results #navOption .host:hover, 
+#page #results #navOption .next:hover {
 		opacity:1;
 }
 
 /* SnuffWrap */
-.snuffWrap {width:100px;display:inline-block;margin:5px;background:#efefef;}
+.snuffWrap {width:100px;display:inline-block;margin-right:5px;background:#efefef;}
 .snuffWrap .snuffContentWrap{overflow:hidden;height:100px;background:#ddd;}
 .snuffWrap .snuffImg{float:left;}
 .snuffWrap .snuffImg img{border:0px;}
@@ -187,10 +207,29 @@ opacity:0.85;
 #newSnuff.large {text-decoration:none;font-size:2em;padding-top:92px;text-align:center;float:left;width:198px;height:130px;font-weight:bold;color:#009acd;-moz-border-radius:5px;background: white;}
 
 /* Snufflr_Item */
-#snufflr_item #results #showTags a{color:#00AEEF;text-decoration:none;}
-#snufflr_item #showWrap{overflow:auto;float:left;margin-bottom:10px;}
+
+#showTags strong{text-shadow:0 1px 0 #EEEEEE;color:#868686;font-size:1.2em;}
+#snufflr_item #showTags a{
+margin-top: 5px;
+	-moz-border-radius:5px 5px 5px 5px;
+	background:url("/images/label.png") no-repeat scroll right center transparent;
+	color:#FFFFFF;
+	display:block;
+	font-size:1.1em;
+	font-weight:bold;
+	margin-bottom:7px;
+	opacity:0.85;
+	padding:5px 15px 6px 6px;
+	width: 100px;
+}
+#snufflr_item #showTags a:hover {
+	opacity: 1;
+	text-decoration: none;
+}
+
+#snufflr_item #showWrap{float:left;margin-bottom:10px;}
 #snufflr_item #results h2{}
-#snufflr_item #topOptions{padding:1px;}
+#snufflr_item #topOptions{}
 #snufflr_item #topOptions .topOptionsLeft{float:left;}
 #snufflr_item #topOptions .topOptionsRight{float:right;}
 #snufflr_item #showImageWrap a img{border:0px;}
