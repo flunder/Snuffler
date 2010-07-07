@@ -52,7 +52,7 @@ opacity:0.85;
 #header #snuffles #snufflesAll a{color:#333;text-decoration:none;margin-right:5px;}
 #header #snuffles #snufflesMine a{color:#fff;text-decoration:none;}
 #header #userWrap{ float: right;}
-#header #userWrap #user{position:relative;right:10px;top:10px;}
+#header #userWrap #user{position:relative;right:10px;top:20px;}
 #header #userWrap #user .login,
 #header #userWrap #user .signup {
   -moz-border-radius:6px 6px 6px 6px;
