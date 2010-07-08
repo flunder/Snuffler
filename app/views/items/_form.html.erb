@@ -24,7 +24,13 @@
 
 <div class="row">
 	<%= f.label :project_id, 'Project:' %>
-	<%= f.text_field :project_id, :id => 'sF_project' %>
+	<% @projects = current_user.projects %>
+	<% if !@projects.empty? %>
+		<%= collection_select("item", "project_id", @projects, :id, :name ) %>
+	<% else %>
+		no projects created yet, create one <%= link_to projects_path, :controller => "projects", :action => "new" %>
+		
+	<% end %>
 </div>
 
 <div class="row">

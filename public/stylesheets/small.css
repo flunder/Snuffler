@@ -113,7 +113,20 @@ body {
 }
 
 #col2 {
-	width: 170px; float: right;
+	width: 170px; float: right;font-size: 1.2em;line-height: 1.5em;
+}
+
+#col2 h3 {
+	clear:both;
+	font-size:1.5em;
+	margin:0;
+}
+
+#col2 ul {
+	padding:0px;margin-left: 0px;margin-bottom: 0px;font-size: 1em; list-style: none;line-height: 1.2em;
+}
+
+#col2 ul li {	
 }
 
 #page #col1,

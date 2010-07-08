@@ -3,8 +3,6 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
 
-puts @projects
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @projects }
@@ -41,7 +39,10 @@ puts @projects
   # POST /projects
   # POST /projects.xml
   def create
+    params[:project][:user_id] = current_user.id
     @project = Project.new(params[:project])
+
+    puts "------ #{params[:project][:user_id]}"
 
     respond_to do |format|
       if @project.save

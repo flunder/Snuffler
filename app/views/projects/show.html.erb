@@ -1,5 +1,5 @@
 <% content_for :localnav do %>
-	<h2><%=h @project.name %></h2>
+	<h2>Project: <%=h @project.name %></h2>
 <% end %>
 
 <%= render(:partial => "items/item", :collection => @project.items) %>
@@ -8,6 +8,6 @@
 <%= link_to 'Back', projects_path %>
 
 <% content_for :col2 do %>
-	<b>Name:</b> <%=@project.name%><br/>
-	<b>Owner:</b> <%=@project.user.username%><br/>
+	<b>Project:</b> <%=@project.name%><br/>
+	<b>Owner:</b> <%=link_to @project.user.username, @project.user %><br/>
 <% end %>
