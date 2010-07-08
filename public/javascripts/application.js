@@ -20,6 +20,10 @@ $(document).ready(function () {
 	};
 	
 	$(".snuffName").hoverIntent(config)	
+	
+	// flash messages 
+	$('.flashmsg').delay(6000).slideUp(300);
+	
 });
 
 function pullUp() {

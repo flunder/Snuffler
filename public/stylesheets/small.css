@@ -31,7 +31,10 @@ body {
 #errorExplanation h2 { text-align:left;font-weight:bold;padding:5px 5px 5px 15px;font-size:12px;margin:-7px;background-color:#c00;color:#fff; }
 #errorExplanation p { color:#333;margin-bottom:0;padding:5px; }
 #errorExplanation ul li { font-size:12px;list-style:square; }
-#flash_notice, #flash_error{ margin-left:20px;font-weight:bold; }
+#flash_notice,#flash_error{clear:both;color:#444444;font-size:1.2em;font-weight:bold;line-height:1.3em;margin-bottom:20px;padding-left:1.7em;}
+
+#flash_error { background:url("/images/error.png") no-repeat scroll 0 50%;}
+#flash_notice { background:url("/images/info.png") no-repeat scroll 0 50%; }
 
 /* Header */
 #header { clear:both;margin:0 auto 21px;padding-top:56px;position:relative;width:960px;}

@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
 
   def tag
     @headline = "Tag: #{params[:id]}"
-    @items = Item.find_tagged_with(params[:id]).paginate(:per_page => 50, :page => params[:page])
+    @items = Item.tagged_with(params[:id]).paginate(:per_page => 50, :page => params[:page])
     render :action => 'index'
   end
 
