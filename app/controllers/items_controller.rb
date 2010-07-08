@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  before_filter :login_required, :only => [:new, :edit, :create, :update, :destroy]
+  before_filter :login_required, :only => [:new, :edit, :create, :update, :destroy] #required for certain items?
   before_filter :getThumbnailSize
   
   def index
@@ -10,7 +10,9 @@ class ItemsController < ApplicationController
       
       @items = Item.all(
           :include => :user, 
-          :order => 'id DESC').paginate(:per_page => 6, :page => params[:page])
+          :order => 'id DESC',
+          :conditions => { :private => 0 }
+      ).paginate(:per_page => 6, :page => params[:page])
     
       if request.xhr?
          sleep(1) 
