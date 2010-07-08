@@ -23,6 +23,11 @@
 </div>
 
 <div class="row">
+	<%= f.label :project_id, 'Project:' %>
+	<%= f.text_field :project_id, :id => 'sF_project' %>
+</div>
+
+<div class="row">
 	<%= f.label :type, 'Type' %>
 	<%= select_tag :type, (options_for_select([
 		['General', 1], 

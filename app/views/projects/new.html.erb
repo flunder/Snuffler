@@ -1,0 +1,24 @@
+<h1>New project</h1>
+
+<% form_for(@project) do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.label :name, 'Name:' %>
+  <%= f.text_field :name %>
+
+  <br/>
+
+  <%= f.label :item_id, 'Item Id:' %>
+  <%= f.text_field :item_id %>
+
+	<br/>
+
+  <%= f.label :user_id, 'Owner Id:' %>
+  <%= f.text_field :user_id %>
+	
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', projects_path %>
