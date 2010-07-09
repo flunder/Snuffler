@@ -253,3 +253,5 @@ margin-top: 5px;
 .snuffDetailsAdmin{width:100px;}
 .snuffDetailsAdmin a{color:#bbb !important;margin-right:17px;}
 .snuffDetailsAdmin a:hover{color:#333 !important;}
+
+#footer { height: 40px; clear: both; width: 960px; margin: auto; }
