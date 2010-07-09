@@ -87,7 +87,7 @@ body {
 #switchSize{display:none;}
 
 /* new/edit Snuff Form */
-#snuffForm{}
+#snuffForm{float:left;margin-bottom:20px;}
 #snuffForm .row{float:left;clear:both;margin-bottom:5px;}
 #snuffForm label{width:80px;float:left;padding:3px;margin-right:6px;color:#aaa;}
 #snuffForm input,
@@ -148,7 +148,8 @@ body {
 	text-decoration:none;
 }
 
-#page #results #navOption {}
+#page #results #navOption {clear:both;}
+
 #page #results #navOption .back,
 #page #results #navOption .edit,
 #page #results #navOption .destroy, 

@@ -1,11 +1,13 @@
-<h1>New snuff</h1>
-<%= link_to 'Back', items_path %>
+<h1>Post a Snuffl</h1>
 
 <% if logged_in? %>  
 	<% form_for(@item, :html => { :multipart => true, :id => 'snuffForm' }) do |f| %>
 		<%= render :partial => 'form', :locals => { :f => f } %> 
 	<% end %>
 <% else %>
-	Please login to snuffle!
+	Please login to snuffler!
 <% end %>
-	
+
+<div id="navOption">	
+	<div class="back"><%= link_to 'Back', items_path %></div>
+</div>	

@@ -26,7 +26,7 @@
 	<%= f.label :project_id, 'Project:' %>
 	<% @projects = current_user.projects %>
 	<% if !@projects.empty? %>
-		<%= collection_select("item", "project_id", @projects, :id, :name ) %>
+		<%= collection_select("item", "project_id", @projects, :id, :name, :prompt => ""  ) %>
 	<% else %>
 		no projects created yet, create one <%= link_to projects_path, :controller => "projects", :action => "new" %>
 		
@@ -53,10 +53,9 @@
 </div>
 
 <div class="row">
-	<%= f.label 'Tag List (Delimiter = ,)' %>
+	<%= f.label 'Tag List (use ,)' %>
 	<%= f.text_field :tag_list %>
 </div>
-
 
 <div class="row">
 	<%= f.submit 'Save', :id => 'sF_create' %>
