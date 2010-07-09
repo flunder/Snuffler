@@ -1,6 +1,6 @@
 <% if logged_in? %>
-  <div class="login"><%= link_to "Log out", logout_path %></div>
+  	<div class="login"><%= link_to "Log out", logout_path %></div>
 <% else %>
-  <div class="signup"><%= link_to "Sign up", signup_path %></div>
-  <div class="login"><%= link_to "log in", login_path %></div>
+  	<div class="signup"><%= link_to "Sign up", signup_path %></div>
+  	<div class="login"><%= link_to "log in", login_path %></div>
 <% end %>

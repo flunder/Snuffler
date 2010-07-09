@@ -126,8 +126,7 @@ body {
 	padding:0px;margin-left: 0px;margin-bottom: 0px;font-size: 1em; list-style: none;line-height: 1.2em;
 }
 
-#col2 ul li {	
-}
+#col2 ul li {}
 
 #page #col1,
 #page #col2{
@@ -137,7 +136,6 @@ body {
 	padding:20px;
 
 }
-
 
 #page #results {}
 
@@ -155,7 +153,8 @@ body {
 #page #results #navOption .destroy, 
 #page #results #navOption .prev, 
 #page #results #navOption .host, 
-#page #results #navOption .next {
+#page #results #navOption .next,
+#page #results #navOption .show {
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
 	display:inline-block;

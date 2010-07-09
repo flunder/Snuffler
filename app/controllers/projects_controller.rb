@@ -1,8 +1,15 @@
 class ProjectsController < ApplicationController
 
+  before_filter :login_required, :only => [:index, :new, :edit, :create, :update, :destroy]
+  
   def index
-    @projects = Project.all
-
+  
+    if current_user.has_role?('admin')
+      @projects = Project.all
+    else 
+      @projects = current_user.projects      
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @projects }

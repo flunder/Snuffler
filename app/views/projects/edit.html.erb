@@ -1,12 +1,11 @@
 <h1>Editing project</h1>
 
 <% form_for(@project) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+  <%= render :partial => 'form', :locals => { :f => f } %> 
+  <p><%= f.submit 'Update' %></p>
 <% end %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<div id="navOption">
+	<div class="show"><%= link_to 'Show', @project %></div>
+	<div class="back"><%= link_to 'Back', projects_path %></div>
+</div>

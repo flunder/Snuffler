@@ -1,4 +1,5 @@
 <% if logged_in? %> 
+
 	<% @Collection = Collection.find(:first, :conditions => "user_id = '#{current_user.id}' AND item_id = '#{item.id}'") %>
 	
 	<% if (item.user_id != current_user.id ) %>

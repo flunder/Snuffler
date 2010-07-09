@@ -1,16 +1,10 @@
 <h1>Create a new project</h1>
 
 <% form_for(@project) do |f| %>
-  <%= f.error_messages %>
-
-  <%= f.label :name, 'Project name:' %>
-  <%= f.text_field :name %>
-
-  <br/>
-
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+  <%= render :partial => 'form', :locals => { :f => f } %> 
+  <p><%= f.submit 'Create Project' %></p>
 <% end %>
 
-<%= link_to 'Back', projects_path %>
+<div id="navOption">
+	<div class="back"><%= link_to 'Back', projects_path %></div>
+</div>

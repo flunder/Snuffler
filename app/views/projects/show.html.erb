@@ -4,10 +4,15 @@
 
 <%= render(:partial => "items/item", :collection => @project.items) %>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
-
 <% content_for :col2 do %>
 	<b>Project:</b> <%=@project.name%><br/>
 	<b>Owner:</b> <%=link_to @project.user.username, @project.user %><br/>
 <% end %>
+
+<br/><br/>
+
+<div id="navOption">
+	<!-- need some is mine logic for the edit here ~ just to hide it / and in controller! -->
+	<div class="edit"><%= link_to 'Edit', edit_project_path(@project) %></div>
+	<div class="back"><%= link_to 'Back', projects_path %></div>
+</div>	

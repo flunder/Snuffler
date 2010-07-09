@@ -14,7 +14,11 @@
 	<%= render(:partial => "items/item", :collection => @collectionArray) %>
 </div>
 
-<%= link_to "&lt; Back", :back %>
+<br/><br/>
+
+<div id="navOption">	
+	<div class="back"><%= link_to "Back", :back %></div>
+</div>
 
 <% content_for :col2 do %>
     <h3>Projects</h3>
