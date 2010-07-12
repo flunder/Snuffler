@@ -25,6 +25,8 @@ body {
 	margin: 0;
 }
 
+h2 {margin-top: 0px;}
+
 /* Errors */
 .fieldWithErrors { padding:2px;background-color:red;display:table; }
 #errorExplanation { width:400px;border:2px solid red;padding:7px;padding-bottom:12px;margin-bottom:20px;background-color:#f0f0f0; }
@@ -200,7 +202,7 @@ body {
 .snuffWrap .snuffDetailsAdmin a:hover{color:#333 !important;}
 .snuffWrap #collection_submit{border:0px;font-weight:bold;-moz-border-radius:15px;background:#eee;color:#555;margin-top:43px;padding:5px 10px;}
 .snuffWrap #collection_submit:hover{background:#999;color:#fff}
-#newSnuff.small {text-decoration:none;font-size:2em;padding-top:42px;text-align:center;float:left;height:55px;font-weight:bold;color:#009acd;-moz-border-radius:5px;background: white;}
+#newSnuff.small{-moz-border-radius:5px 5px 5px 5px;background:none repeat scroll 0 0 #EEEEEE;color:#222222;float:left;font-size:2em;font-weight:bold;height:61px;margin-right:5px;padding-top:42px;text-align:center;text-decoration:none;width:95px;}
 
 .snuffWrapLarge {width:200px;float:left;margin:5px;background:#efefef;background:#fff; padding: 0px 5px 0px 5px;-moz-border-radius:5px;}
 .snuffWrapLarge .snuffContentWrap{overflow:hidden;height:200px;}

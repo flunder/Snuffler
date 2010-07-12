@@ -9,16 +9,14 @@
 	<%= render(:partial => "items/item", :collection => @items) %>
 </div>
 
-<div id="u_favs">
-	<h3>Favs:</h3>
-	<%= render(:partial => "items/item", :collection => @collectionArray) %>
-</div>
+<% if !@collectionArray.empty? %>
+	<div id="u_favs">
+		<h3>Favs:</h3>
+		<%= render(:partial => "items/item", :collection => @collectionArray) %>
+	</div>
+<% end %>
 
 <br/><br/>
-
-<div id="navOption">	
-	<div class="back"><%= link_to "Back", :back %></div>
-</div>
 
 <% content_for :col2 do %>
     <h3>Projects</h3>
