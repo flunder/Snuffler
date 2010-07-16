@@ -8,18 +8,24 @@
 	<!-- Zitat: So if you're using current_page? in a view or in another helper,
 		 you're on the right track, in terms of "doing the right thing". -->
 	
-	<% if @item.photo.exists? then %>
+	<% if @item.photo.exists? %>
 		<div id="showImageWrap">
 			<!-- handle normal / original view -->
 			<% current_page?(:view => 'original')? @size = :original : @size = :large %>
 			<% if current_page?(:view => 'original')  %>
-			<%= link_to( image_tag(@item.photo.url(@size)))%>
+			<%= link_to(image_tag(@item.photo.url(@size)))%>
 			<% else %>
-			<%= link_to( image_tag(@item.photo.url(@size)), :view => "original")%>
+			<%= link_to(image_tag(@item.photo.url(@size)), :view => "original")%>
 			<% end %>
 		</div>
 	<% else %>
-		<p>There are no photo's attached!</p>
+		<!--<p>There are no photo's attached!</p>-->
+	<% end %>
+	
+	<% if @item.blurber? %>
+		<div id="showBlurbWrap">
+			<%=@item.blurber%>
+		</div>	
 	<% end %>
 
 </div>

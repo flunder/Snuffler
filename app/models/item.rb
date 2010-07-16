@@ -33,7 +33,7 @@ class Item < ActiveRecord::Base
     def dblcheck_file_name
       #some fallback mechanism to fix the nofilename issue
       if photo_file_name.nil?
-        self.photo.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(16)}.png")
+        self.photo.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(6)}.png")
       end
     end
 

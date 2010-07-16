@@ -1,5 +1,7 @@
 <% content_for :localnav do %>
 	<h2><%=h @user.username.capitalize %>'s Snuffles</h2>
+	Snuffles / Favorites
+		
 <% end %>
 
 <div id="u_snuffles">
@@ -15,8 +17,6 @@
 		<%= render(:partial => "items/item", :collection => @collectionArray) %>
 	</div>
 <% end %>
-
-<br/><br/>
 
 <% content_for :col2 do %>
     <h3>Projects</h3>

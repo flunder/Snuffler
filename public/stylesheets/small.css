@@ -256,4 +256,10 @@ margin-top: 5px;
 .snuffDetailsAdmin a{color:#bbb !important;margin-right:17px;}
 .snuffDetailsAdmin a:hover{color:#333 !important;}
 
+#showBlurbWrap { border-left: 10px solid #ddd; padding: 5px 10px; }
+#showBlurbWrap ul { padding: 0px; }
+#showBlurbWrap li { list-style-position: inside;}
+
+
+
 #footer { height: 40px; clear: both; width: 960px; margin: auto; }
