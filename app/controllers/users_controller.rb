@@ -11,6 +11,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id]) 
     
+    if logged_in? && current_user.id == @user.id 
+      @itsmyAccount = true
+    end   
+    
     # Added items
     @items = @user.items.find(:all, :order => 'id DESC').paginate(:per_page => 100, :page => params[:page])
     

@@ -1,7 +1,6 @@
 <% content_for :localnav do %>
 	<h2><%=h @user.username.capitalize %>'s Snuffles</h2>
-	Snuffles / Favorites
-		
+	<!-- Snuffles / Favorites select -->
 <% end %>
 
 <div id="u_snuffles">
@@ -19,7 +18,7 @@
 <% end %>
 
 <% content_for :col2 do %>
-    <h3>Projects</h3>
+    <h3><% if @itsmyAccount %>My<% else %><%=@user.username.capitalize %>'s<% end %> Projects</h3>
 	<div id="u_projects">
 		<ul>
 		<% @user.projects.each do |p|%>
@@ -27,4 +26,24 @@
 		<% end %>
 		</ul>
 	</div>
+	
+	<% if @itsmyAccount %>
+		<div class="col2button"><%= link_to 'Create one', new_project_path %></div>	
+	<% end %>
+	
+	<style>
+	#col1 h2 {width:725px;}	
+	#col2 h3 {width:195px;}	
+		
+	h2,h3 {
+		background:Beige;
+		border-bottom:1px solid #EEEEEE;
+		font-size:1.6em;
+		left:-20px;
+		margin-top:0;
+		padding:5px 0 5px 15px;
+		position:relative;
+		top:0;
+	}
+	</style>
 <% end %>

@@ -228,7 +228,7 @@ h2 {margin-top: 0px;}
 
 #col2 strong{text-shadow:0 1px 0 #EEEEEE;color:#868686;font-size:1.2em;}
 #snufflr_item #showTags a{
-margin-top: 5px;
+	margin-top: 5px;
 	-moz-border-radius:5px 5px 5px 5px;
 	background:url("/images/label.png") no-repeat scroll right center transparent;
 	color:#FFFFFF;
@@ -260,6 +260,28 @@ margin-top: 5px;
 #showBlurbWrap ul { padding: 0px; }
 #showBlurbWrap li { list-style-position: inside;}
 
+/* Snufflr user */
+#u_projects { margin-bottom: 10px;}
+	.col2button {
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		display:inline-block;
+		background-color:#000000;
+		font-weight:bold;
+		line-height:14px;
+		opacity:0.85;
+		text-shadow:0 1px 1px #000000;
+		margin-right: 5px;
+		font-size: 0.9em;
+	}
+.col2button a {
+		color:#FFFFFF;
+		display:block;
+		padding:6px 11px;
+		text-decoration:none;
+}
+
+.col2button:hover{opacity: 1;}
 
 
 #footer { height: 40px; clear: both; width: 960px; margin: auto; }
