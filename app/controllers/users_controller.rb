@@ -15,6 +15,8 @@ class UsersController < ApplicationController
       @itsmyAccount = true
     end   
     
+    # added items need a privacy filter ( only show if i'm logged into my own account )
+    
     # Added items
     @items = @user.items.find(:all, :order => 'id DESC').paginate(:per_page => 100, :page => params[:page])
     
