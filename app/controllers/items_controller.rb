@@ -83,7 +83,7 @@ class ItemsController < ApplicationController
     respond_to do |format|
       if @item.update_attributes(params[:item])
         flash[:notice] = 'Item was successfully updated.'
-        format.html { redirect_to(items_url) }
+        format.html { redirect_to(request.request_uri) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -111,7 +111,7 @@ class ItemsController < ApplicationController
     require 'faker'
     
     items = []
-    1000.times do 
+    10.times do 
       items.push [Faker::Name.first_name, Faker::Lorem.paragraph(sentence_count = 3)]
     end
     

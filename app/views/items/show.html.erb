@@ -69,7 +69,11 @@
 	
 	<!-- Pickers -->
 
-	
-
+	<!-- belongs to project -->
+	<strong>Projects:</strong> 
+	<%=link_to @item.project.name, @item.project %>
+	<br/>
+	<strong>Snufflr:</strong> 
+	<%=link_to @item.user.username, @item.user %>
 <% end %>
 
