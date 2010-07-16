@@ -34,12 +34,8 @@
 </div>
 
 <div class="row">
-	<%= f.label :type, 'Type' %>
-	<%= select_tag :type, (options_for_select([
-		['General', 1], 
-		['Design', 2],
-		['Code', 3],
-		],1)) %>
+	<%= f.label :snuffltype, 'Type' %>
+	<%= f.select :snuffltype, ["General","Design","Code"] %>
 </div>
 
 <div class="row">

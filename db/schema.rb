@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100716115600) do
+ActiveRecord::Schema.define(:version => 20100716173338) do
 
   create_table "collections", :force => true do |t|
     t.string   "user_id"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20100716115600) do
     t.string   "image_remote_url"
     t.text     "blurber"
     t.text     "from"
-    t.text     "type"
+    t.text     "snuffltype"
     t.integer  "user_id"
     t.text     "private"
     t.integer  "project_id"
