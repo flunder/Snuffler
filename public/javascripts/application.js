@@ -36,8 +36,8 @@ function pullDown() {
 
 // Ajax pick
 $(document).ready(function () {
+
 	$('.pickme').click(function(){ 
-	
 		$.ajax({
 		    type: 'PUT',  //post
 				data: ({
@@ -49,9 +49,25 @@ $(document).ready(function () {
             },
             url: '/collections'
 		})
-		
 		return false;
 	});
+/*	
+	$('.next').click(function(){
+		
+		$.ajax({
+		    type: 'PUT',  //post
+				data: ({
+					'item_id' : 'x',
+					'user_id' : 'y', 
+					'authenticity_token' : AUTH_TOKEN }),
+            	dataType: 'script', 
+            	complete: function(request){
+            },
+            url: '/next'
+		})
+		return false;
+	})
+*/
 });
 
 //http://docs.jquery.com/Plugins/livequery#Download

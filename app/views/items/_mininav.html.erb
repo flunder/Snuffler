@@ -1,0 +1,8 @@
+
+<% if @prevItem %>
+	<div class="prev"><%= link_to 'Prev.', @prevItem %></div>
+<% end %>
+<div class="host"><%= link_to 'Host', @item.from if @item.from != "" %></div>
+<% if @nextItem %>
+	<div class="next"><%= link_to 'Next', @nextItem %></div>
+<% end %>

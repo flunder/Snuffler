@@ -24,7 +24,7 @@
 		<% if item.photo_content_type %>
 			<%= link_to (image_tag item.photo.url(:thumb)), item, :class => 'snuffImg' %>
 		<% else %>
-			<img src="/images/noimage.png" />
+			<a href="#" class="snuffImg"><img src="/images/noimage.png" /></a>
 		<% end %>
 		<div class="snuffDetails" style="background: url('<%=item.photo.url(:thumb)%>')">
 			<div class="seethrough"></div>

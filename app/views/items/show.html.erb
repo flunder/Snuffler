@@ -49,11 +49,12 @@
 		<% end %>
 	<% end %>
 	
-	<%= render(:partial => "item_pick", :locals => { :item => @item })%>
+	<!--<%= render(:partial => "item_pick", :locals => { :item => @item })%> -->
+	<%= render(:partial => "mininav")%>	
+
+
 		
-	<div class="prev"><a href="#">Prev.</a></div>
-	<div class="host"><%= link_to 'Host', @item.from if @item.from != "" %></div>
-	<div class="next"><a href="#">Next</a></div>
+
 </div>
 
 <% content_for :col2 do %>
@@ -68,6 +69,7 @@
 	<% end %>
 	
 	<!-- Pickers -->
+	<!-- private lock -->
 
 	<!-- belongs to project -->
 	<% if @item.project %>

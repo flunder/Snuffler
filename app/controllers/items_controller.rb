@@ -39,6 +39,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @prevItem = Item.find(:last, :conditions =>  ["id < #{@item.id} and private == 0"])
+    @nextItem = Item.find(:first, :conditions =>  ["id > #{@item.id} and private == 0"])
 
     respond_to do |format|
       format.html
@@ -103,32 +105,18 @@ class ItemsController < ApplicationController
     end
   end
   
-  def test
-  
-  #enable me first!  
+  def getnextitem 
     
-=begin
-    require 'faker'
-    
-    items = []
-    10.times do 
-      items.push [Faker::Name.first_name, Faker::Lorem.paragraph(sentence_count = 3)]
+    if request.xhr?       
+      
+      @item = Item.all(:limit => 1)
+      itemHTML = 'x'
+      
+      respond_to do |format| 
+        format.js { render(:partial => 'js/nextitem', :collection => @item) } 
+      end      
     end
-    
-    items.each do |item|
-      Item.create(
-        :name => item[0],
-        :photo_file_name => "Bikeshed_London.png",
-        :photo_content_type => "image/png",
-        :photo_file_size => "3111967",
-        :blurber => item[1],
-        :from => "www.bikeshd.co.uk",
-        :user_id => "2"   
-      ) 
-    end
-    
-    @result = items;
-=end
+
   end  
     
   

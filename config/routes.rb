@@ -14,14 +14,15 @@ ActionController::Routing::Routes.draw do |map|
 
   # ajax pick/unpick
   map.connect 'collections', :controller => 'collections', :action => 'create'
+  
+  # nextItem 
+  map.connect 'next', :controller => 'items', :action => 'getnextitem'
 
   # broken?
   map.resources :users, :has_many => :items
   map.resources :users, :member => { :enable => :put } do |users|
     users.resources :roles
   end
-
-  map.connect '/test', :controller => 'items', :action => 'test'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
