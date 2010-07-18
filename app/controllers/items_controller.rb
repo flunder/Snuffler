@@ -41,8 +41,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    @prevItem = Item.find(:last, :conditions =>  ["id < #{@item.id} and private == 0"])
-    @nextItem = Item.find(:first, :conditions =>  ["id > #{@item.id} and private == 0"])
+    @nextItem = Item.find(:last, :conditions =>  ["id < #{@item.id} and private == 0"])
+    @prevItem = Item.find(:first, :conditions =>  ["id > #{@item.id} and private == 0"])
 
     respond_to do |format|
       format.html
