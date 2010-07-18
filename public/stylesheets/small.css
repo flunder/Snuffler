@@ -14,6 +14,12 @@ a:hover {text-decoration:underline;}
 pre {background-color:#eee;padding:10px;font-size:11px;}
 .clear { clear: both; }
 
+/* Error horses */
+.errorpage {padding-top: 20px;}
+.errorpage #col1 {width: 120px !important;}
+.errorpage a img {border: 0px;margin-bottom: 10px;}
+.errorpage #snufflr {text-align:right;color:#ddd;}
+
 body {
 	background:url("/images/bg.png") repeat scroll 0 0 #DDDDDD;
 	border-top:1px solid #FFFFFF;

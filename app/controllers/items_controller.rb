@@ -8,6 +8,8 @@ class ItemsController < ApplicationController
       
       @headline = "";
       
+      puts "PROJECT#{:project}";
+      
       @items = Item.all(
           :include => :user, 
           :order => 'id DESC',
