@@ -46,7 +46,6 @@
 		<% end %>
 
 	    <% @myTags = @myTags.uniq %>
-   	    <% @myTags = @myTags.sort!(&:name) %>
 	
 		<ul>
 		<% @myTags.each do |tag| %>
