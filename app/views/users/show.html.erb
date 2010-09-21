@@ -31,6 +31,32 @@
 		<div class="col2button"><%= link_to 'Create one', new_project_path %></div>	
 	<% end %>
 	
+	
+	<br/><br/>
+	<!-- tags --><!-- i know this is bad code! -->
+ 
+	<h3>Tags</h3>
+	<div id="u_projects">
+		<% @myTags = Array.new %>
+	
+	    <% @items.each do |item| %>
+	    	<% item.tags.each do |tag| %>
+				<% @myTags << tag %>
+			<% end %>
+		<% end %>
+
+	    <% @myTags = @myTags.uniq %>
+   	    <% @myTags = @myTags.sort!(&:name) %>
+	
+		<ul>
+		<% @myTags.each do |tag| %>
+			<li><%= link_to tag.name, :controller => 'items' ,:action => 'tag', :id => tag.name %></li>
+		<% end %>
+		</ul>
+	</div>
+	<!-- /tags -->
+	
+	<!--
 	<style>
 	#col1 h2 {width:725px;}	
 	#col2 h3 {width:195px;}	
@@ -46,4 +72,5 @@
 		top:0;
 	}
 	</style>
+	-->
 <% end %>
