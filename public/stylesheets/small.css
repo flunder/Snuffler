@@ -190,7 +190,7 @@ h2 {margin-top: 0px;}
 }
 
 /* SnuffWrap */
-.snuffWrap {width:100px;display:inline-block;margin-right:5px;background:#efefef;}
+.snuffWrap {background:none repeat scroll 0 0 #EFEFEF;display:inline-block;margin-bottom:14px;margin-right:14px;width:100px;}
 .snuffWrap .snuffContentWrap{overflow:hidden;height:100px;background:#ddd;}
 .snuffWrap .snuffImg{float:left;}
 .snuffWrap .snuffImg img{border:0px;}
@@ -288,6 +288,52 @@ h2 {margin-top: 0px;}
 }
 
 .col2button:hover{opacity: 1;}
+
+#col2 h3 {
+padding-bottom: 3px;
+padding-top: 10px;
+clear: both; 
+}
+
+#col2 h3.first {
+padding-top: 0px;
+}
+
+.tags ul li a {
+	-moz-border-radius: 12px 12px 12px 12px;
+	background: url("/images/glass.png") repeat-x scroll 0 50% rgba(200, 0, 300, 0.25);
+	border:1px solid #CCCCCC;
+	color:#666666;
+	float:left;
+	font-weight:normal;
+	margin:0 4px 5px 0;
+	padding:4px 10px;
+	text-decoration:none;
+	white-space:nowrap;
+}
+
+.tags ul li a:hover {
+	background: url("/images/glass.png") repeat-x scroll 0 50% rgba(200, 0, 300, 0.07);
+}
+
+.projects ul li a {
+	background: url("/images/glass.png") repeat-x scroll 0 50% rgba(100, 100, 100, 0.27);
+	border:1px solid #DDDDDD;
+	color:#333333;
+	float:left;
+	clear: both;
+	font-size:1.1em;
+	font-weight:bold;
+	margin:0 4px 5px 0;
+	padding:6px 14px;
+	text-decoration:none;
+	white-space:nowrap;
+}
+
+.projects ul li a:hover {
+	background: url("/images/glass.png") repeat-x scroll 0 50% rgba(100, 100, 100, 0.07);
+}
+
 
 
 #footer { height: 40px; clear: both; width: 960px; margin: auto; }

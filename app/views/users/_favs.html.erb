@@ -1,0 +1,6 @@
+<% if !@collectionArray.empty? %>
+	<div id="u_favs">
+		<h3>Favs:</h3>
+		<%= render(:partial => "items/item", :collection => @collectionArray) %>
+	</div>
+<% end %>

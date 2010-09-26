@@ -1,6 +1,5 @@
 <% content_for :localnav do %>
 	<h2><%=h @user.username.capitalize %>'s Snuffles</h2>
-	<!-- Snuffles / Favorites select -->
 <% end %>
 
 <div id="u_snuffles">
@@ -10,19 +9,18 @@
 	<%= render(:partial => "items/item", :collection => @items) %>
 </div>
 
-<% if !@collectionArray.empty? %>
-	<div id="u_favs">
-		<h3>Favs:</h3>
-		<%= render(:partial => "items/item", :collection => @collectionArray) %>
-	</div>
-<% end %>
+<%= will_paginate(@items) %>
+
+<!--% render(:partial => 'users/favs') %-->
 
 <% content_for :col2 do %>
-    <h3><% if @itsmyAccount %>My<% else %><%=@user.username.capitalize %>'s<% end %> Projects</h3>
-	<div id="u_projects">
+
+    <h3 class="first"><% if @itsmyAccount %>My<% else %><%=@user.username.capitalize %>'s<% end %> Projects</h3>
+
+	<div id="u_projects" class="projects">
 		<ul>
 		<% @user.projects.each do |p|%>
-			<li><%= link_to p.name, p %></li>
+			<li><%= link_to p.name, p, :style => "padding-right:#{p.items.size*5+20}px" %></li>
 		<% end %>
 		</ul>
 	</div>
@@ -31,12 +29,9 @@
 		<div class="col2button"><%= link_to 'Create one', new_project_path %></div>	
 	<% end %>
 	
-	
-	<br/><br/>
 	<!-- tags --><!-- i know this is bad code! -->
- 
 	<h3>Tags</h3>
-	<div id="u_projects">
+	<div id="u_projects" class="tags">
 		<% @myTags = Array.new %>
 	
 	    <% @items.each do |item| %>
@@ -54,22 +49,5 @@
 		</ul>
 	</div>
 	<!-- /tags -->
-	
-	<!--
-	<style>
-	#col1 h2 {width:725px;}	
-	#col2 h3 {width:195px;}	
-		
-	h2,h3 {
-		background:Beige;
-		border-bottom:1px solid #EEEEEE;
-		font-size:1.6em;
-		left:-20px;
-		margin-top:0;
-		padding:5px 0 5px 15px;
-		position:relative;
-		top:0;
-	}
-	</style>
-	-->
+
 <% end %>
